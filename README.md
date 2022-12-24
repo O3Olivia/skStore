@@ -1,2 +1,18 @@
-# skStore
-🛍️ 온라인 쇼핑몰 서비스 with React
+# 👥 Introduction 
+Simple e-commerce site
+
+# 🛠 Core Tools
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white">
+
+# 👀  Initial Screen
+
+# 💻 Add more function with http Request
+><b>Firebase Auth API </b>
+
+## ⚙️ DataBase 
+>
+
+# 📝 Handwriting code
+<span><img src="https://user-images.githubusercontent.com/87024040/206638488-d021914d-b34b-40d5-bb4d-e42524ed4315.jpg" width="500" height="800"></span>
+<span><img src="https://user-images.githubusercontent.com/87024040/206638975-ed454f0a-9b78-4989-8957-76fa90602604.jpg" width="500" height="800"></span>
+

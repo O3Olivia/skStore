@@ -1,0 +1,112 @@
+/* Login */
+.loginForm {
+    width: 80%;
+    max-width: 40rem;
+    padding: 2rem;
+    position: absolute;
+    top:52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+.loginForm h1 {
+    font-size: 55px;
+    font-weight: bolder;
+    margin: auto;
+    display: block;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.loginForm>input {
+    width: 80%;
+    border: 1.5px solid #cacaca;
+    border-radius: 8px;
+    padding: 1rem 12px;
+    margin-bottom: 1rem;
+    font-size: 17px;
+    transition: .8s border-color;
+}
+.loginForm>input:hover {
+    border: 1px solid #171717;
+}
+.passwordInput{
+    position: relative;
+}
+.passwordInput > input {
+    width: 80%;
+    border: 1.5px solid #cacaca;
+    border-radius: 8px;
+    padding: 1rem 12px;
+    margin-bottom: 1rem;
+    font-size: 17px;
+    transition: .8s border-color;
+}
+.passwordInput>input:hover {
+    border: 1px solid #171717;
+}
+.passwordInput>input:focus{
+    outline: none;
+    border: 1.5px solid black;
+}
+.loginForm>input:focus {
+    outline: none;
+    border: 1.5px solid black;
+}
+.loginForm .pwdShow{
+    top: 25%;
+    left: 85%;
+    border: none;
+    background: none;
+    font-size: 22px;
+    color: #727272;
+    position: absolute;
+}
+.loginBtn {
+    text-align: center;
+    width: 84%;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: black;
+    padding: 0.8rem 12px;
+    margin: 2.5rem 0 2rem 0;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    transition: all 0.2s;
+    
+}
+.loginForm button:hover {
+    cursor: pointer;
+    color: #efefef8b;
+}
+.loginForm .pwdShow:hover {
+    cursor: pointer;
+    color: #1e1e1ee1;
+}
+
+/* signUp & find email */
+.signUp {
+    width: 80%;
+    margin-bottom: 0.67rem;
+}
+
+.signUp > span {
+    color: #727272;
+    font-size: 16px;
+    margin-right: 106px;
+    
+}
+.signUp .pullRight> button {
+    background-color: inherit;
+    border:none;
+    color: black;
+    text-decoration: underline;
+    margin-right: -75px;
+    float: right;
+}
+.signUp .pullRight>button:hover{
+    cursor: pointer;
+    color:#000000bb;
+}
