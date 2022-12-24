@@ -5,7 +5,10 @@ Simple e-commerce site
 <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white">
 
 # 👀  Initial Screen
+### 메인화면, 로그인 / 회원가입 화면
 <img src="https://user-images.githubusercontent.com/87024040/209430396-49ee8e22-bfed-4d33-8386-e2639172279e.gif">
+
+### 게시판 / 게시판 등록 화면
 <img src="https://user-images.githubusercontent.com/87024040/209430389-c30dcc46-f16d-47dc-bf75-a06f7a8cc41b.gif">
 # 💻 Add more function with http Request
 ><b>Firebase Auth API </b>
