@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 import BoardList from "../../components/board/BoardList";
-import UseHttp from "../../hooks/use-http";
+import UseHttp from "../../hooks/";
 import { getAllBoards } from "../../store/board-api";
 
 import NoBoardFound from "../../components/board/NoBoardFound";

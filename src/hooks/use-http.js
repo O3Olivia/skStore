@@ -8,15 +8,13 @@ function httpReducer(state, action) {
       status: "pending",
     };
   }
-
   if (action.type === "SUCCESS") {
     return {
-      data: action.responseData,
+      data: action.resData,
       error: null,
       status: "completed",
     };
   }
-
   if (action.type === "ERROR") {
     return {
       data: null,
@@ -24,37 +22,33 @@ function httpReducer(state, action) {
       status: "completed",
     };
   }
-
   return state;
 }
 
-function useHttp(requestFunction, startWithPending = false) {
+function useHttp(requestFn, startWithPending = false) {
   const [httpState, dispatch] = useReducer(httpReducer, {
     status: startWithPending ? "pending" : null,
     data: null,
     error: null,
   });
-
   const sendRequest = useCallback(
-    async function (requestData) {
+    async function (reqData) {
       dispatch({ type: "SEND" });
       try {
-        const responseData = await requestFunction(requestData);
-        dispatch({ type: "SUCCESS", responseData });
+        const resData = await requestFn(reqData);
+        dispatch({ type: "SUCCESS", resData });
       } catch (error) {
         dispatch({
           type: "ERROR",
-          errorMessage: error.message || "Something went wrong!",
+          errorMessage: error.message || "에러발생!",
         });
       }
     },
-    [requestFunction]
+    [requestFn]
   );
-
   return {
     sendRequest,
     ...httpState,
   };
 }
-
 export default useHttp;

@@ -1,17 +1,14 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import useHttp from "../../hooks/use-http";
-
-import { getBoardItem } from "../../store/board-api";
 import LoadingSpin from "../../components/Layout/LoadingSpin";
 import BoardDetail from "../../components/board/BoardDetail";
-
 import classes from "./boardDetailPage.module.css";
 
+import useHttp from "../../hooks/use-http";
+import { getBoardItem } from "../../store/board-api";
 const BoardDetailPage = () => {
   const params = useParams();
   const { boardId } = params;
-
   const {
     sendRequest,
     status,
