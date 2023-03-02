@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import BoardItem from "./BoardItem";
-import LogContext from "../../store/log-context";
+import SignInContext from "../../store/signIn-context";
 import classes from "./BoardList.module.css";
 import { HiOutlineChevronDown, HiChevronUp } from "react-icons/hi2";
 
@@ -17,7 +17,7 @@ const sortBoards = (boards, ascending) => {
   });
 };
 const BoardList = (props) => {
-  const logCtx = useContext(LogContext);
+  const SignInCtx = useContext(SignInContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -39,8 +39,8 @@ const BoardList = (props) => {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   useEffect(() => {
-    if (logCtx.isLoggedIn === true) setIsLoggedIn(true);
-  }, [logCtx.isLoggedIn]);
+    if (SignInCtx.isLoggedIn === true) setIsLoggedIn(true);
+  }, [SignInCtx.isLoggedIn]);
   console.log(props);
 
   const boardList = sortedBoards.map((board) => (

@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useRef, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import LogContext from "../../store/log-context";
+import SignInContext from "../../store/signIn-context";
 import LoadingSpin from "../Layout/LoadingSpin";
 
 import classes from "./Login.module.css";
@@ -13,7 +13,7 @@ const Login = (props) => {
   const pwdInputRef = useRef();
   const nameInputRef = useRef();
 
-  const LogCtx = useContext(LogContext);
+  const SignInCtx = useContext(SignInContext);
 
   const [isLogin, setIsLogin] = useState(true);
   // isLogin: 회원가입이 되어있냐 즉 회원이니 아니니를 알 수 있는 것. 아마 login보단 isSignup으로 바꾸면 더 좋을 것 같음
@@ -82,7 +82,7 @@ const Login = (props) => {
           new Date().getTime() + +data.expiresIn * 1000 // data.expiresIn이 string 형태라서 +를 붙여 number로 전환
           // 1000을 곱하는 이유는 1시간동안 token을 유지되게 해야하기 때문에 expirationTime을 현재 로그인한 시간에서 +1hr하려고.
         );
-        LogCtx.login(data.idToken, expirationTime.toISOString());
+        SignInCtx.login(data.idToken, expirationTime.toISOString());
         // toISOString()는 Date를 yyyy-mm-ddThh:mm:ss 형식의 문자열로 변환
         navigate("/", { replace: true }); // 로그인 or 회원가입 끝나면 원래 main 페이지로 이동
 

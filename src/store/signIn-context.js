@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 
 let logoutTimer;
 
-const LogContext = React.createContext({
+const SignInContext = React.createContext({
   token: "",
   isLoggedIn: false,
   login: (token) => {},
@@ -36,7 +36,7 @@ const retrieveStoredToken = () => {
   };
 };
 
-export const LogContextProvider = (props) => {
+export const SignInContextProvider = (props) => {
   const tokenData = retrieveStoredToken();
   let initialToken;
   // tokenData가 있을 경우에만, 받아온 tokenData에서 token 값만 꺼내서 initialToken에다 저장시킨다. => initialToken에는 이 남은 token값만 들어있다.
@@ -83,10 +83,10 @@ export const LogContextProvider = (props) => {
   };
 
   return (
-    <LogContext.Provider value={contextValue}>
+    <SignInContext.Provider value={contextValue}>
       {props.children}
-    </LogContext.Provider>
+    </SignInContext.Provider>
   );
 };
 
-export default LogContext;
+export default SignInContext;

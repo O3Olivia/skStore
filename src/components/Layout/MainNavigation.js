@@ -1,18 +1,18 @@
 import React, { Fragment, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import LogContext from "../../store/log-context";
+import SignInContext from "../../store/signIn-context";
 import logo from "../../assets/logo2.png";
 import classes from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
   const navigate = useNavigate();
-  const logCtx = useContext(LogContext);
-  const isLoggedIn = logCtx.isLoggedIn;
+  const SignInCtx = useContext(SignInContext);
+  const isLoggedIn = SignInCtx.isLoggedIn;
   const isAdmin = localStorage.email === "admin@admin.com";
 
   const logoutHandler = () => {
     alert("우리 또 다시 만나요 👋");
-    logCtx.logout();
+    SignInCtx.logout();
     navigate("/", { replace: true });
   };
   return (
