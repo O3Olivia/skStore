@@ -75,3 +75,19 @@ Firebase로 **Email/Password** 기반으로 회원가입을 할 수 있도록 �
 <span><img src="https://user-images.githubusercontent.com/87024040/206638488-d021914d-b34b-40d5-bb4d-e42524ed4315.jpg" width="300" height="400"></span>
 <span><img src="https://user-images.githubusercontent.com/87024040/206638975-ed454f0a-9b78-4989-8957-76fa90602604.jpg" width="300" height="400"></span>
 
+
+## 👾 주요 개발 이슈
+### Issue 1 - [Context API]로그인 토큰 관리
+
+**🚨 Situation**
+- Firebase에서 받은 사용자 토큰을 관리하고 사용자 인증 상태를 유지하기 위해 `Context API`를 사용했습니다.
+- Context API를 사용하여 사용자 토큰을 전역으로 관리했습니다.
+- 이를 통해 다른 컴포넌트에서 로그인 상태를 유지할 수 있게 되었고 코드의 가독성과 유지보수성도 향상시켰습니다.
+- 회원 가입할 때 작성한 회원 정보를 Context에 저장한 뒤 로그인합니다.
+- 커뮤니티에 글 작성 시 가입했던 이메일이 저장되어 게시글 작성자 이름에 자동 적용됩니다.
+
+<img width="544" alt="image" src="https://user-images.githubusercontent.com/87024040/232700595-6f8b9174-f89e-4e99-bab1-57d23ab9accb.png">
+
+<img width="545" alt="image" src="https://user-images.githubusercontent.com/87024040/232700849-6c2e07ce-ef50-4921-a399-f73862953090.png">
+
+
